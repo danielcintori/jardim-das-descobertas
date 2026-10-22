@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#315a47">
+  <title>Jardim das Descobertas · Um toque, uma descoberta</title>
+  <meta name="description" content="60 experiências de computação com imagens, voz e apoio. Atividades curtas, efeitos claros e escolhas respeitadas.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header>
+    <a class="brand" href="#" aria-label="Início"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 37V19M21 26C4 27 4 10 8 7C22 7 23 17 21 26ZM22 18C21 4 33 1 38 5C39 17 29 21 22 18Z" fill="#78977a" stroke="#315b45" stroke-width="2" stroke-linejoin="round"/></svg><span>jardim das<br><b>descobertas</b></span></a>
+    <nav aria-label="Principal"><button class="nav active" data-page="catalog">Explorar</button><button class="nav" data-page="guide">Acompanhar</button><button class="nav" data-page="progress">Meu caderno</button></nav>
+    <button class="settings-btn" id="settingsBtn"><span>☷</span> Ajustes</button>
+  </header>
+  <main id="main"></main>
+  <footer><span><b>jardim das descobertas</b> · Computação no seu ritmo.</span><span>Aprender com tempo, escolha e companhia.</span></footer>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="settings" aria-labelledby="settingsTitle">
+    <form id="settingsForm">
+      <div class="modal-head"><div><span class="eyebrow">Apoios e preferências</span><h2 id="settingsTitle">Do seu jeito.</h2></div><button type="button" id="closeSettings" class="icon-close" aria-label="Fechar ajustes">×</button></div>
+      <p>Comece com pouco. Ajuste pela resposta da aluna.</p>
+      <label class="setting-row" for="voiceSetting"><span>Instruções com voz<small>A voz só toca quando você pede.</small></span><input type="checkbox" id="voiceSetting"></label>
+      <button type="button" class="test-voice" id="testSettingsVoice">◖)) Testar voz em português</button><small id="voiceStatus" role="status"></small>
+      <label class="setting-row" for="choicesSetting"><span>Opções para escolher<small>Nos jogos de pareamento e busca simples.</small></span><select id="choicesSetting"><option value="2">2 opções</option><option value="3">3 opções</option></select></label>
+      <label class="setting-row" for="memorySetting"><span>Cartas na memória<small>Quatro cartas formam dois pares.</small></span><select id="memorySetting"><option value="4">4 cartas</option><option value="6">6 cartas</option></select></label>
+      <label class="setting-row" for="roundsSetting"><span>Rodadas por atividade<small>Uma já é um começo. Repetir é opcional.</small></span><select id="roundsSetting"><option value="1">1 rodada</option><option value="3">3 rodadas</option></select></label>
+      <label class="setting-row" for="mascotSetting"><span>Mostrar os companheiros</span><input type="checkbox" id="mascotSetting"></label>
+      <label class="setting-row" for="companionSetting"><span>Companheiro</span><select id="companionSetting"><option value="cactus">Caco, o cacto</option><option value="girl">Lia e as frutas</option></select></label>
+      <label class="setting-row" for="motionSetting"><span>Movimento nas comemorações<small>Desligado por padrão. Sem flashes.</small></span><input type="checkbox" id="motionSetting"></label>
+      <p class="settings-note">As quantidades passam a valer na próxima rodada. O movimento nos jogos de iniciar e pausar só começa depois de um toque.</p>
+      <button class="primary wide" type="submit">Guardar ajustes</button>
+    </form>
+  </dialog>
+  <dialog id="pause" aria-labelledby="pauseTitle"><div class="pause-content"><span class="pause-icon">Ⅱ</span><span class="eyebrow">No seu tempo</span><h2 id="pauseTitle">Uma pausa é bem-vinda.</h2><p>Podemos continuar depois ou terminar por aqui.</p><button class="primary wide" id="resume">▶ Continuar</button><button class="secondary wide" id="endSession">Encerrar e registrar</button><button class="link-btn" id="leave">Voltar ao catálogo sem registrar</button></div></dialog>
+  <script src="art.js"></script><script src="games.js"></script><script src="engine.js"></script><script src="guide.js"></script><script src="app.js"></script>
+</body></html>
